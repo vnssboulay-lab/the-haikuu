@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #eef2f8;
+    color: #111111;
+    font-family: "Century Gothic", sans-serif;
+}
+
+.page-container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+}
+
+.page-header,
+.page-footer {
+    background-color: #e3e4e6;
+    text-align: center;
+    padding: 10px;
+}
+
+.page-header {
+    border-bottom: 1px solid #888888;
+}
+
+.page-footer {
+    border-top: 1px solid #888888;
+}
+
+.page-header h2,
+.page-footer h2 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.title-section {
+    text-align: center;
+    padding: 5px 10px 20px;
+}
+
+.title-section h1 {
+    margin: 0;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.author {
+    margin: 2px 0 0;
+    font-size: 18px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 15px 20px 50px;
+}
+
+.image-box img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.haiku-box {
+    width: 400px;
+    min-height: 190px;
+    padding: 10px;
+    background-color: #e3e4e6;
+    border: 1px solid #cccccc;
+}
+
+.haiku-box h2 {
+    margin: 12px 0 30px;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.haiku-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 850px) {
+    .main-content {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .image-box img {
+        width: min(400px, 100%);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .image-box,
+    .haiku-box {
+        width: min(400px, 100%);
+    }
+
+    .title-section h1 {
+        font-size: 26px;
+    }
+}
